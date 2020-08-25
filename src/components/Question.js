@@ -4,6 +4,7 @@ const Question = () => {
 
   // Define state
   const [ amount, saveAmount ] = useState(0);
+  const [ error, saveError ] = useState(false);
 
   // Function that read budget
   const defineBudget = e => {
@@ -15,9 +16,14 @@ const Question = () => {
     e.preventDefault();
 
     // Validate
+    if(amount < 1 || isNaN(amount)) {
+      saveError(true);
+      return;
+    }
 
     // If validate is ok
-    
+    saveError(false);
+
   }
 
   return (
