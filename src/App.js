@@ -29,7 +29,7 @@ function App() {
       //Reset to false
       saveCreateExpense(false);
     }
-  }, [expense]);
+  }, [expense, createexpense, expenses, remainder]);
 
   return (
     <div className="container">
