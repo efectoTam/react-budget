@@ -1,7 +1,7 @@
 import React, { Fragment, useState } from 'react';
 import Error from './Error';
 
-const Question = ( {saveBudget, saveRemaining, updateQuestion}) => {
+const Question = ( {saveBudget, saveRemainder, updateQuestion}) => {
 
   // Define state
   const [ amount, saveAmount ] = useState(0);
@@ -25,7 +25,7 @@ const Question = ( {saveBudget, saveRemaining, updateQuestion}) => {
     // If validate is ok
     saveError(false);
     saveBudget(amount);
-    saveRemaining(amount);
+    saveRemainder(amount);
     updateQuestion(false);
   }
 
